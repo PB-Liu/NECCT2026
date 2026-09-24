@@ -1,0 +1,472 @@
+/* ============================================
+   2026 NECCT Conference — style.css
+   ============================================ */
+
+:root {
+  --paper: #f8f5ee;
+  --paper-alt: #f1ece0;
+  --ink: #2a2724;
+  --ink-soft: #5c564d;
+  --rule: #ddd5c4;
+  --vermillion: #a4402c;
+  --vermillion-dark: #832f1f;
+  --serif: "Noto Serif", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 .4em;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(248, 245, 238, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: .04em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand span { color: var(--vermillion); }
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: .92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: .02em;
+  transition: color .15s ease;
+}
+
+.site-nav a:hover { color: var(--vermillion); }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 72px 24px 56px;
+}
+
+.hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--vermillion);
+  margin: 0 0 14px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  line-height: 1.12;
+  margin-bottom: .35em;
+}
+
+.hero-dates {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin: 0 0 .25em;
+}
+
+.hero-location {
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+  font-size: 1.02rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .92rem;
+  letter-spacing: .02em;
+  transition: all .15s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--vermillion);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--vermillion-dark); }
+
+.btn-ghost {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.btn-ghost:hover { background: var(--ink); color: var(--paper); }
+
+.hero-art {
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px -18px rgba(42, 39, 36, 0.35);
+  border: 1px solid var(--rule);
+}
+
+.hero-art img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Info strip ---------- */
+
+.info-strip {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.info-strip-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.info-label {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .68rem;
+  color: #c9a08f;
+  font-weight: 600;
+}
+
+.info-value {
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+/* ---------- Program sections ---------- */
+
+.program {
+  padding: 64px 24px 72px;
+}
+
+.program-heading {
+  max-width: var(--max);
+  margin: 0 auto 32px;
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
+  text-align: center;
+}
+
+.program-columns {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+}
+
+.day-column {
+  padding-bottom: 8px;
+}
+
+.day-column#saturday {
+  border-left: 1px solid var(--rule);
+  padding-left: 56px;
+}
+
+.program-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.day-title {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--vermillion);
+  font-weight: 700;
+}
+
+.day-name {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.day-date {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.schedule {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.event:last-child { border-bottom: none; }
+
+.event-time {
+  font-family: var(--serif);
+  font-weight: 600;
+  color: var(--vermillion);
+  font-size: .82rem;
+  letter-spacing: .01em;
+}
+
+.event-body h3 {
+  font-size: 1.08rem;
+  margin-bottom: .1em;
+}
+
+.event-break .event-body h3,
+.event-meal .event-body h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.event-break, .event-meal, .event-closing { opacity: .82; }
+
+.talks {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.talks li {
+  list-style: none;
+}
+
+.talks details summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 26px;
+}
+
+.talks details summary::-webkit-details-marker {
+  display: none;
+}
+
+.talks details summary::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--vermillion);
+  line-height: 1.3;
+  transition: transform .15s ease;
+}
+
+.talks details[open] summary::after {
+  content: "\2212";
+}
+
+.talks details summary:hover .talk-title {
+  color: var(--vermillion-dark);
+}
+
+.abstract {
+  margin: 12px 0 2px;
+  padding: 14px 16px;
+  background: rgba(164, 64, 44, 0.045);
+  border-left: 2px solid var(--vermillion);
+  border-radius: 2px;
+  font-size: .92rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.abstract p {
+  margin: 0 0 .85em;
+}
+
+.abstract p:last-child {
+  margin-bottom: 0;
+}
+
+.talk-title {
+  font-size: .98rem;
+}
+
+.talk-speaker {
+  font-size: .88rem;
+  color: var(--ink-soft);
+}
+
+.talk-speaker::before {
+  content: "— ";
+}
+
+.talk-speaker a {
+  color: var(--vermillion-dark);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(131, 47, 31, 0.35);
+}
+
+.talk-speaker a:hover {
+  border-bottom-color: var(--vermillion-dark);
+}
+
+.event-keynote {
+  background: rgba(164, 64, 44, 0.06);
+  border-radius: 4px;
+  padding: 24px;
+  border-bottom: none;
+  margin-top: 8px;
+}
+
+.event-keynote .event-time { color: var(--vermillion-dark); }
+.event-keynote h3 { font-size: 1.25rem; }
+.event-keynote .talk-title { font-size: 1.05rem; font-weight: 500; }
+
+/* ---------- Location ---------- */
+
+.location {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.location-inner { max-width: 640px; margin: 0 auto; }
+
+.location p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 26px;
+}
+
+.location-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--ink);
+  color: #b7b0a5;
+  padding: 28px 24px;
+  text-align: center;
+  font-size: .85rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .program-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .day-column#saturday {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-art { max-width: 340px; margin: 0 auto; order: -1; }
+  .info-strip-inner { grid-template-columns: repeat(2, 1fr); }
+  .event-time { font-size: .8rem; }
+  .site-nav { gap: 16px; }
+  .site-nav a { font-size: .82rem; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 48px 18px 40px; }
+  .header-inner { padding: 14px 18px; }
+}
