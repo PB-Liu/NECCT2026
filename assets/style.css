@@ -406,26 +406,24 @@ img { max-width: 100%; display: block; }
 .event-keynote h3 { font-size: 1.25rem; }
 .event-keynote .talk-title { font-size: 1.05rem; font-weight: 500; }
 
-/* ---------- Location ---------- */
+/* ---------- Sponsors ---------- */
 
-.location {
+.sponsors {
   padding: 64px 24px;
   text-align: center;
 }
 
-.location-inner { max-width: 640px; margin: 0 auto; }
+.sponsors-inner { max-width: 640px; margin: 0 auto; }
 
-.location p {
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-  margin-bottom: 26px;
+.sponsors-inner .eyebrow {
+  display: block;
+  text-align: center;
 }
 
-.location-actions {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
+.sponsors p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 0;
 }
 
 /* ---------- Footer ---------- */
