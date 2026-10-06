@@ -125,14 +125,8 @@ img { max-width: 100%; display: block; }
 
 .hero-location {
   color: var(--ink-soft);
-  margin: 0 0 28px;
+  margin: 0;
   font-size: 1.02rem;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
 }
 
 .btn {
@@ -406,11 +400,43 @@ img { max-width: 100%; display: block; }
 .event-keynote h3 { font-size: 1.25rem; }
 .event-keynote .talk-title { font-size: 1.05rem; font-weight: 500; }
 
+/* ---------- Getting Here ---------- */
+
+.getting-here {
+  padding: 64px 24px 56px;
+  text-align: center;
+}
+
+.getting-here-inner { max-width: 640px; margin: 0 auto; }
+
+.getting-here p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 26px;
+}
+
+.getting-here-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.getting-here-note {
+  margin: 18px 0 0;
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  opacity: .85;
+}
+
 /* ---------- Sponsors ---------- */
 
 .sponsors {
-  padding: 64px 24px;
+  padding: 56px 24px 64px;
   text-align: center;
+  background: var(--paper-alt);
+  border-top: 1px solid var(--rule);
 }
 
 .sponsors-inner { max-width: 640px; margin: 0 auto; }
@@ -462,6 +488,22 @@ img { max-width: 100%; display: block; }
   .event-time { font-size: .8rem; }
   .site-nav { gap: 16px; }
   .site-nav a { font-size: .82rem; }
+}
+
+@media (max-width: 560px) {
+  .header-inner {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .site-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .site-nav a {
+    white-space: nowrap;
+    font-size: .8rem;
+  }
 }
 
 @media (max-width: 480px) {
